@@ -99,7 +99,23 @@ Route::get('/administrator/logout', function(){
     Session::flush();
     return redirect('/login');
 });
-
+Route::get('/administrator/solvequery', function () {
+    $query = ContactUs::all();
+    return view('Administrator.QuerySolve')->with(compact('query'));
+});
+Route::get('/administrator/query/{email}', function ($email) {
+    $User = ContactUs::where('email', $email)->first();
+    return view('Administrator.QuerySolve')->with(compact('User'));
+});
+Route::post('/administrator/solvequery', function (Request $request) {
+    $reply = $request->reply;
+    $email = $request->email;
+    $Student = ContactUs::where('email', $email)->first();
+    if ($Student->delete()) {
+        mail($email, $Student->Query_Type, $reply);
+        return redirect('/administrator/solvequery');
+    }
+});
 // Route::get('/administrator/changeemail', function(){
 //     return view('Administrator.Change Email');;
 // });
