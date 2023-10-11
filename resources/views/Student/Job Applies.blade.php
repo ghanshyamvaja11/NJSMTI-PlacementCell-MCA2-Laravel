@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,7 +117,7 @@ function toggleMenu() {
 @if (isset($ApplicationExists))
            <center><h4 style='color: red'>{{$ApplicationExists}}</h4></center>
     @endif
-    @if(count($applies) == 0)
+    @if(isset($applies) and count($applies) == 0)
     <center><h4 style="color: blue;">job applies are not avaiable yet.</h4></center>
     @endif
     @if (isset($applies) and count($applies) != 0)
@@ -398,5 +397,4 @@ function Speech(){
 // window.location.href = "";
 }
 Speech();
->>>>>>> 3c7be8318fb699997152ab09ea0bc3429244ea16
     </script>

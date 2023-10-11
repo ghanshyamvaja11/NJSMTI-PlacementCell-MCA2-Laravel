@@ -145,7 +145,7 @@ function toggleMenu() {
     </center>
     @endif
 
-        @if (!isset($remainingjobs) and count($remainingjobs) != 0)
+        @if (isset($remainingjobs) and count($remainingjobs) != 0)
     <center>
         <h1 style="color: white; background: blue; border-radius: 29px; font-size: 29.29px;">Jobs Applies</h1>
         <table>
