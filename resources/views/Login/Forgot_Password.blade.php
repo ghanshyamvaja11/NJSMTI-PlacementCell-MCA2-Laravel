@@ -129,7 +129,7 @@ function toggleMenu() {
     </section>
 </main>
 <hr>
-@include('Layout.footer');
+@include('Layout.footer')
 </body>
 </html>
 
