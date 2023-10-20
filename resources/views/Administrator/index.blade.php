@@ -122,7 +122,7 @@ function toggleMenu() {
 </section>
 </main>
 <hr>
-@include('Administrator.footer');
+@include('Administrator.footer')
 </body>
 </html>
 
