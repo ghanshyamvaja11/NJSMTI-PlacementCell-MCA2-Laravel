@@ -120,17 +120,21 @@
      <section> 
          <p> 
          <center> 
-         <form action="{{url('')}}/student/uploadresume" method="POST" enctype="multipart/form-data"> 
+         <form action="{{url('')}}/student/uploadresume" method="post" enctype="multipart/form-data"> 
              @csrf 
              <fieldset> 
              <legend>Upload Resume</legend> 
  <center><img src="{{asset('Images/Login/Logged_in.jpg')}}" style='background-color: white; height: 96px; width: 95px; border-radius: 59px;'></center> 
                  <p> 
-                 <label for="StudentId" style="color: white; font-weight: bold;">Your Id : </label></div><input type="text" id="StudentId" class="fields" name="StudentId" value="{{$UserId}}" style="width: 159px;" readonly required /><br><br> 
-                 <input type="file" id="resume" class="fields" name="resume" required /><br><br> 
-             <center><input type="submit" name="upload" value="Upload" id="upload"></center><br> 
-            <iframe src="{{asset('public_html/uploads/Student '.$UserId.'.pdf')}}"></iframe> 
-             <a href="{{asset('public_html/uploads/Student '.$UserId.'.pdf')}}" download><center><input type="button" name="" value="Download Resume" id="" style="color: yellow; background: black; font-size: 19.9px; border-radius: 15.9px; cursor: pointer;"></center></a> 
+                 <label for="StudentId" style="color: white; font-weight: bold;">Your Enrollment No : </label><input type="text" id="StudentId" class="fields" name="StudentId" value="{{$UserId}}" style="width: 159px;" readonly required /><br><br> 
+                 @if(isset($Student) && $Student->Result_Path == null)
+                 <input type="text" id="ResumeLink" class="fields" name = "ResumeLink" placeholder="Resume's Public Link(ex. google drive, etc..)" required><br><br>
+                 @else
+                 <input type="text" id="ResultLink" class="fields" name = "ResumeLink" value="{{$Student->Resume_Path}}" required><br><br>
+                 @endif
+             <center><input type="submit" value="Upload" id="upload"></center><br> 
+             @if(isset($Student) and $Student->Resume_Path != null)
+             <a href="{{$Student->Resume_Path}}"><center><input type="button" name="" value="view" id="" style="color: yellow; background: black; font-size: 19.9px; border-radius: 15.9px; cursor: pointer;"></center></a> @endif
          </form> 
      </section> 
  </main> 

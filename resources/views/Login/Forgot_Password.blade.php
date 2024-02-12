@@ -8,7 +8,6 @@
 <link rel="icon" type="image/x-icon" href="{{asset('Images/Header&Footer/favicon.jpg')}}">
     
     <link rel="stylesheet" href="{{asset('css/headerNmenuNfooter.css')}}">
-    <link rel="stylesheet" href="{{asset('css/Forgot_Password.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     .disclaimer{
@@ -73,6 +72,54 @@
         display: block;
     }
 }
+form{ 
+     display: inline-block; 
+     font-size: 19px; 
+     border: transparent; 
+     text-align: left; 
+ } 
+  
+ form fieldset{ 
+     background-color: blue; 
+     border-radius: 29px; 
+ } 
+  
+ form fieldset legend{ 
+     text-align: center; 
+     color: white; 
+     background-color: red; 
+     font-size: 29px; 
+     border-radius: 15px; 
+     padding-left: 5px; 
+     padding-right: 6px; 
+ } 
+  
+ form strong{ 
+     padding-right: 9px; 
+ } 
+  
+ #Login_type{ 
+     height: 36px; 
+     width: 236.8px; 
+ } 
+  
+ #Username, #Password, #key{ 
+     height: 29px; 
+     width: 229px; 
+ } 
+  
+ #Check{ 
+     color: black; 
+     border-radius: 19px; 
+     font-size: 19px; 
+     font-weight: bolder; 
+ } 
+  
+ #Check:hover{ 
+     cursor: pointer; 
+     color: white; 
+     background-color: red; 
+ }
 </style>
 <script>
 function toggleMenu() {
@@ -129,7 +176,7 @@ function toggleMenu() {
     </section>
 </main>
 <hr>
-@include('Layout.footer');
+@include('Layout.footer')
 </body>
 </html>
 

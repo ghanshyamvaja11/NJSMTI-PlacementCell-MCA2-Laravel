@@ -122,13 +122,12 @@ function toggleMenu() {
                 <th style="color: blue;">EventId</th>
                 <th style="color: blue;">Name</th>
                 <th style="color: blue;">Event Date</th>
-                <th style="color: blue;">Apply</th>
+                <th style="color: blue;">View</th>
             </tr>
             @foreach ($events as $event)
             <tr>
             <th>{{$event->EventId}}</th>
                 <th>{{$event->Name}}</th>
-                <th>{{$event->Date}}</th>
                 <th>{{date("F j, Y", strtotime($event->Date))}}</th>
                 <th><a href="{{url('')}}/student/events/view/{{$event->EventId}}"><button style="color: white; background: green; cursor: pointer; border-radius: 19
                 .5px;" class="btndlt">View</button></a></th>

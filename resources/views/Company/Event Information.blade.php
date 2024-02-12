@@ -119,30 +119,30 @@ function toggleMenu() {
 
 <main>
     <center>
-    <h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Job Information</h1>
+    <h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Event Information</h1>
     </center>
-    <h4 style="font-size: 15.9px; color: blue;">Your Id : <span style="font-weight: bold; color: black;">{{$UserId}}</span></h4>
-    <h4 style="font-size: 15.9px; color: blue;">Event Id : <span style="font-weight: bold; color: black;">{{$EventId->EventId}}</span></h4>
-    <h4 style="font-size: 15.9px; color: blue;">Event Name : <span style="font-weight: bold; color: black;">{{$EventId->Name}}</span></h4>
+    <h4 style="font-size: 15.9px; color: blue;">Your Id : <span style="font-weight: bold; color: black;">{{session('UserId')}}</span></h4>
+    <h4 style="font-size: 15.9px; color: blue;">Event Id : <span style="font-weight: bold; color: black;">{{$Event->EventId}}</span></h4>
+    <h4 style="font-size: 15.9px; color: blue;">Event Name : <span style="font-weight: bold; color: black;">{{$Event->Name}}</span></h4>
     <h4 style="font-size: 15.9px; color: blue;">Event Date : <span style="font-weight: bold; color: black;">{{$Event->Date}}</span></h4>
     <h4 style="font-size: 15.9px; color: blue;">Event Desciption : <span style="font-weight: bold; color: black;">{{$Event->Description}}</span></h4>
-    <form action="{{url('')}}/student/events/apply/{{$UserId}}/{{$Event->EventId}}" method="GET">
-            @csrf
-            {{-- <fieldset> --}}
-            {{-- <legend>Job Information</legend> --}}
-            <div style="display: none;">
-                <p>
-                <div id="lable"><label style="color: white; font-weight: bold;" for="StudentId">Your Id : </label></div><input type="text" id="StudentId" class="fields" name="StudentId" value="{{$UserId}}" readonly required /><br><br>
-                <div id="lable"><label style="color: white; font-weight: bold;" for="EventId">Event Id </label></div><input type="text" id="EventId" class="fields" name="EventId" value="{{$Event->EventId}}" readonly required /><br><br>
-                <div id="lable"><label style="color: white; font-weight: bold;" for="JobId">Event Name : </label></div><input type="number" id="JobId" class="fields" name="JobId" inputmod="numeric" value="{{$Event->Name}}" readonly required /><br><br>
-            <div id="lable"><label style="color: white; font-weight: bold;" for="Position">Event Date : </label></div><input type="text" name="Position" id="Position" class="fields" value="{{$Event->Date}}" readonly required><br><br>
-            <label style="color: white; font-weight: bold;" for="Decription">Description</label>    
-  <input type="date" id="EventDate" name="EventDate" class="fields" style="width: 105px;" value="{{$Event->Desciption}}" readonly required><br><br>
-  </div>
-  @if (!isset($registered))
-      <center><input type="submit" style="color: white; background: green; font-size: 29px; border-radius: 15.9px;" name="submit" value="Register"></center>
-  @endif
-        </form>
+  <!--  <form action="{{url('')}}/student/events/apply/{{$UserId}}/{{$Event->EventId}}" method="GET">-->
+  <!--          @csrf-->
+  <!--          {{-- <fieldset> --}}-->
+  <!--          {{-- <legend>Job Information</legend> --}}-->
+  <!--          <div style="display: none;">-->
+  <!--              <p>-->
+  <!--              <div id="lable"><label style="color: white; font-weight: bold;" for="StudentId">Your Id : </label></div><input type="text" id="StudentId" class="fields" name="StudentId" value="{{$UserId}}" readonly required /><br><br>-->
+  <!--              <div id="lable"><label style="color: white; font-weight: bold;" for="EventId">Event Id </label></div><input type="text" id="EventId" class="fields" name="EventId" value="{{$Event->EventId}}" readonly required /><br><br>-->
+  <!--              <div id="lable"><label style="color: white; font-weight: bold;" for="JobId">Event Name : </label></div><input type="number" id="JobId" class="fields" name="JobId" inputmod="numeric" value="{{$Event->Name}}" readonly required /><br><br>-->
+  <!--          <div id="lable"><label style="color: white; font-weight: bold;" for="Position">Event Date : </label></div><input type="text" name="Position" id="Position" class="fields" value="{{$Event->Date}}" readonly required><br><br>-->
+  <!--          <label style="color: white; font-weight: bold;" for="Decription">Description</label>    -->
+  <!--<input type="date" id="EventDate" name="EventDate" class="fields" style="width: 105px;" value="{{$Event->Desciption}}" readonly required><br><br>-->
+  <!--</div>-->
+  <!--@if (!isset($registered))-->
+  <!--    <center><input type="submit" style="color: white; background: green; font-size: 29px; border-radius: 15.9px;" name="submit" value="Register"></center>-->
+  <!--@endif-->
+  <!--      </form>-->
 </main>
 <hr>
 @include('Company.footer')

@@ -115,7 +115,7 @@ function toggleMenu() {
     @if (isset($ApplicationExists))
             <h4 style='color: red'>{{$ApplicationExists}}</h4>
     @endif
-    @if (count($jobs) == 0)
+    @if ((isset($jobs) and count($jobs) == 0))
     <center><h4 style='color: blue;'>jobs are not posted yet.</h4></center>
     @else
     <center>
@@ -145,7 +145,7 @@ function toggleMenu() {
     </center>
     @endif
 
-        @if (isset($remainingjobs) and count($remainingjobs) != 0)
+    @if (isset($remainingjobs) and count($remainingjobs) != 0)
     <center>
         <h1 style="color: white; background: blue; border-radius: 29px; font-size: 29.29px;">Jobs Applies</h1>
         <table>

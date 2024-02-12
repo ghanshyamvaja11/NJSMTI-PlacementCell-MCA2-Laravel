@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJSMTI</title>
+    <title>NJSMTI Placement Cell</title>
 <link rel="icon" type="image/x-icon" href="{{asset('Images/Header&Footer/favicon.jpg')}}">
     
     <link rel="stylesheet" href="{{asset('css/headerNmenuNfooter.css')}}">
@@ -122,6 +122,7 @@ function toggleMenu() {
     <a href="{{url('')}}/administrator/students/manage">Manage Students</a>
     <a href="{{url('')}}/administrator/placement/register">Placement</a>
     <a href="{{url('')}}/administrator/event/create">Event</a>
+    <a href="{{url('')}}/administrator/solvequery">Solve Queries</a>
 </div>
 </section>
 
@@ -209,8 +210,8 @@ function toggleMenu() {
     <tr>
     <td>{{$company->CompanyId}}</td>
     <td>{{$company->Name}}</td>
-    <td>{{$company->Industry}}</td>
     <td>{{$company->Email}}</td>
+    <td>{{$company->Industry}}</td>
     <td>{{$company->Location}}</td>
     </tr>
 @endforeach      

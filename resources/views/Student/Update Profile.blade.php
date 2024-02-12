@@ -149,7 +149,7 @@ function toggleMenu() {
 <center><img src="{{asset('Images/Login/Logged_in.jpg')}}" style='background-color: white; height: 96px; width: 95px; border-radius: 59px;'></center>
                 <p>
                     <label for="Enrollment_No">Enrollment No</label><br>
-                <input type="number" id="Enrollment_No" class="fields" name="Enrollment_No" value="{{$Student->StudentId}}" required readonly /><br><br>
+                <input type="text" id="Enrollment_No" class="fields" placeholder="Enter Your Enrollment No *" name="Enrollment_No" value="{{$UserId}}" required readonly /><br><br>
                 <label for="name">Name</label><br>
                 <input type="text" id="name" class="fields" placeholder="Enter Your Name *" name="name" value="{{$Student->Name}}" required><br><br>
                 <label for="course">Course</label><br>

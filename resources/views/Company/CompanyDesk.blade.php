@@ -5,10 +5,6 @@
 <center><h1 style='color: white; background-color: green; border-radius: 29px;'>Company Desk</h1></center>
 @else
 <script>
-<<<<<<< HEAD
-      window.location.href = "https://njsmtiplacementscell.000webhostapp.com/login";
-=======
-        window.location.href = "https://njsmtiplacementscell.000webhostapp.com/logon";
->>>>>>> 3c7be8318fb699997152ab09ea0bc3429244ea16
+    window.location.href = "https://njsmtiplacementscell.000webhostapp.com/login";
 </script>
 @endif

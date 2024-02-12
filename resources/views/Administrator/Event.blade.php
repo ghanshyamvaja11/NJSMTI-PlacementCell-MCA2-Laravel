@@ -113,6 +113,7 @@ function toggleMenu() {
     <a href="{{url('')}}/administrator/students/manage">Manage Students</a>
     <a href="{{url('')}}/administrator/placement/register">Placement</a>
     <a href="{{url('')}}/administrator/event/create" style="color: white; background-color: red; font-weight: bolder; border: 2px solid white; border-radius: 29.9px;">Event</a>
+    <a href="{{url('')}}/administrator/solvequery">Solve Queries</a>
 </div>
 </section>
 
@@ -156,7 +157,7 @@ function toggleMenu() {
         </form>
     </section>
 
-    @if ($events->isEmpty())
+    @if ($noofevents == 0)
     
     @else
     <center>
@@ -173,7 +174,7 @@ function toggleMenu() {
             <th>{{$event->EventId}}</th>
                 <th>{{$event->Name}}</th>
                 <th>{{date("F j, Y", strtotime($event->Date))}}</th>
-                <th><a href="{{url('')}}/administrator/events/delete/{{$event->EventId}}"><button style="color: white; background: green; cursor: pointer; border-radius: 19.5px;" class="btndlt">Delete</button></a></th>
+                <th><a href="{{url('')}}/administrator/event/delete/{{$event->EventId}}"><button style="color: white; background: red; cursor: pointer; border-radius: 19.5px;" class="btndlt">Delete</button></a></th>
             </tr>
             @endforeach
         </table>

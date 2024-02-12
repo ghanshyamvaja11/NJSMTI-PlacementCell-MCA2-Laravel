@@ -160,41 +160,9 @@ function toggleMenu() {
             <center><input type="submit" name="Register" value="Post new Job" id="Register"></center>
         </form>
     </section>
-
-    @if ($jobs->isEmpty())
     
-    @else
-    <center>
-        <h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Available Jobs</h1>
-        <table>
-            <tr>
-                <th style="color: blue;">Job_Id</th>
-                <th style="color: blue;">Position</th>
-                <th style="color: blue;">Field</th>
-                <th style="color: blue;">Application_Deadline</th>
-                <th style="color: blue;">Delete_Job</th>
-            </tr>
-            @foreach ($jobs as $job)
-            <tr>
-            <th>{{$job->JobId}}</th>
-                <th>{{$job->Position}}</th>
-                <th>{{$job->Field}}</th>
-                <th>{{date("F j, Y", strtotime($job->ApplicationDeadline))}}</th>
-                <th><a href="{{url('')}}/company/jobs/delete/{{$job->JobId}}"><button style="color: white; background: green; cursor: pointer; border-radius: 19.5px;" class="btndlt">Delete</button></a></th>
-            </tr>
-            @endforeach
-        </table>
-    </center>
-    @endif
-
-</main>
-<hr>
-@include('Company.footer')
-</body>
-</html>
-
     @if (isset($success))
-        <h4 style="color: green; font-size: 15.9px;">{{$success}}</h4>
+        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
 
 <script>
 function Speech(){
@@ -236,7 +204,7 @@ Speech();
     @endif
 
 @if (isset($delete))
-        <h4 style="color: green; font-size: 15.9px;">{{$delete}}</h4>
+        <center><h4 style="color: red; font-size: 15.9px;">{{$delete}}</h4></center>
 
 <script>
 function Speech(){
@@ -314,3 +282,35 @@ function Speech(){
 Speech();
     </script>
 @endif
+
+    @if ($jobs->isEmpty())
+    
+    @else
+    <center>
+        <h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Available Jobs</h1>
+        <table>
+            <tr>
+                <th style="color: blue;">Job_Id</th>
+                <th style="color: blue;">Position</th>
+                <th style="color: blue;">Field</th>
+                <th style="color: blue;">Application_Deadline</th>
+                <th style="color: blue;">Delete_Job</th>
+            </tr>
+            @foreach ($jobs as $job)
+            <tr>
+            <th>{{$job->JobId}}</th>
+                <th>{{$job->Position}}</th>
+                <th>{{$job->Field}}</th>
+                <th>{{date("F j, Y", strtotime($job->ApplicationDeadline))}}</th>
+                <th><a href="{{url('')}}/company/jobs/delete/{{$job->JobId}}"><button style="color: white; background: green; cursor: pointer; border-radius: 19.5px;" class="btndlt">Delete</button></a></th>
+            </tr>
+            @endforeach
+        </table>
+    </center>
+    @endif
+
+</main>
+<hr>
+@include('Company.footer')
+</body>
+</html>

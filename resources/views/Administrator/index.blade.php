@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJSMTI</title>
+    <title>NJSMTI Placement Cell</title>
 <link rel="icon" type="image/x-icon" href="{{asset('Images/Header&Footer/favicon.jpg')}}">
     
     <link rel="stylesheet" href="{{asset('css/headerNmenuNfooter.css')}}">
@@ -115,14 +115,15 @@ function toggleMenu() {
 <section>
     <a href="{{url('')}}/administrator/company"><img src="{{asset('Images/Icons/img11a.jpg')}}" class="imgs" alt=""></a>
     <a href="{{url('')}}/administrator/students"><img src="{{asset('Images/Icons/img1.jpg')}}" class="imgs" alt=""></a>
-    <a href="{{url('')}}/administrator/companies/manage"><img src="{{asset('Images/Icons/img5.jpg')}}" class="imgs" alt=""></a>
+    <a href="{{url('')}}/administrator/company/manage"><img src="{{asset('Images/Icons/img5.jpg')}}" class="imgs" alt=""></a>
     <a href="{{url('')}}/administrator/students/manage"><img src="{{asset('Images/Icons/img3.jpg')}}" class="imgs" alt=""></a>
     <a href="{{url('')}}/administrator/placement/register"><img src="{{asset('Images/Icons/img4.jpg')}}" class="imgs" alt=""></a>
     <a href="{{url('')}}/administrator/event/create"><img src="{{asset('Images/Icons/img1a.jpg')}}" class="imgs" alt=""></a>
+    <a href="{{url('')}}/administrator/solvequery"><img src="{{asset('Images/Icons/img2a.jpg')}}" class="imgs" alt=""></a>
 </section>
 </main>
 <hr>
-@include('Administrator.footer');
+@include('Administrator.footer')
 </body>
 </html>
 

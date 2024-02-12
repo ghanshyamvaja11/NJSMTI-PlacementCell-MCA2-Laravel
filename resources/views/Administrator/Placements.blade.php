@@ -109,6 +109,7 @@ function toggleMenu() {
     <a href="{{url('')}}/administrator/students/manage">Manage Students</a>
     <a href="{{url('')}}/administrator/placement/register" style="color: white; background-color: red; font-weight: bolder; border: 2px solid white; border-radius: 29.9px;">Placement</a>
     <a href="{{url('')}}/administrator/event/create">Event</a>
+    <a href="{{url('')}}/administrator/solvequery">Solve Queries</a>
 </div>
 </section>
 

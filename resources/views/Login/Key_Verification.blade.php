@@ -8,7 +8,7 @@
 <link rel="icon" type="image/x-icon" href="{{asset('Images/Header&Footer/favicon.jpg')}}">
     
     <link rel="stylesheet" href="{{asset('css/headerNmenuNfooter.css')}}">
-    <link rel="stylesheet" href="{{asset('css/Forgot_Password.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Forget_Password.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     .disclaimer{

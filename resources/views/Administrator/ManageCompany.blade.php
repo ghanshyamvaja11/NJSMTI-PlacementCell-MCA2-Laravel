@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJSMTI</title>
+    <title>NJSMTI Placement Cell</title>
 <link rel="icon" type="image/x-icon" href="{{asset('Images/Header&Footer/favicon.jpg')}}">
     
     <link rel="stylesheet" href="{{asset('css/headerNmenuNfooter.css')}}">
@@ -109,16 +109,15 @@ function toggleMenu() {
     <a href="{{url('')}}/administrator/students/manage">Manage Students</a>
     <a href="{{url('')}}/administrator/placement/register">Placement</a>
     <a href="{{url('')}}/administrator/event/create">Event</a>
+    <a href="{{url('')}}/administrator/solvequery">Solve Queries</a>
 </div>
 </section>
 
 <main>
-    <center><h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Manage Company data</h1></center>
+    <center><h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Manage Companies</h1></center>
     <hr>
     <center>
         <div id="sec">
-        <h2>Manage Companies</h2>
-
         @if (isset($deletecin))
         @error('CIN')
             <h4 style='color: red'>{{$message}}</h4>

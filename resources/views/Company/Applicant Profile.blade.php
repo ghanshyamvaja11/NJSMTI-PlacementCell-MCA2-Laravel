@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 {{-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,7 +174,6 @@ function Speech(){
 Speech();
     </script> --}}
 
->>>>>>> 3c7be8318fb699997152ab09ea0bc3429244ea16
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,15 +294,12 @@ function toggleMenu() {
             <legend>Applicant's Profile</legend>
 <center><img src="{{asset('Images/Login/Logged_in.jpg')}}" style='background-color: white; height: 96px; width: 95px; border-radius: 59px;'></center>
                 <p>
-                <input type="text" id="Enrollment_No" class="fields" value="{{$Student->StudentId}}" required readonly><br><br>
-                <input type="text" id="name" class="fields" value="{{$Student->Name}}" required readonly><br><br>
-                <select name="course" id="course" class="fields" required readonly>
-                    <option selected>{{$Student->Program}}</option>
-                </select><br><br>
-            <input type="Number" class="fields" value="{{$Student->Mobile}}" required readonly><br><br>
-            
-  <input type="email" class="fields" value="{{$Student->Email}}" required readonly><br><br>
-  <a href="{{asset('storage/uploads/Student '.$Student->StudentId.'.pdf')}}" download><center><input type="button" name="" value="Download Resume" id="" style="color: yellow; background: black; font-size: 19.9px; border-radius: 15.9px; cursor: pointer;"></center></a>
+                <input type="text" id="Enrollment_No" class="fields" value="Enrollment No : {{$Student->StudentId}}" required readonly><br><br>
+                <input type="text" id="name" class="fields" value="Name : {{$Student->Name}}" required readonly><br><br>
+                <input type="text" id="name" class="fields" value="Course : {{$Student->Program}}" required readonly><br><br>
+            <input type="text" class="fields" value="Mobile : {{$Student->Mobile}}" required readonly><br><br> 
+  <input type="email" class="fields" value="Email : {{$Student->Email}}" required readonly><br><br>
+  <a href="{{$Student->Resume_Path}}" download><center><input type="button" name="" value="View Resume" id="" style="color: yellow; background: black; font-size: 19.9px; border-radius: 15.9px; cursor: pointer;"></center></a>
         </form>
 
 </main>

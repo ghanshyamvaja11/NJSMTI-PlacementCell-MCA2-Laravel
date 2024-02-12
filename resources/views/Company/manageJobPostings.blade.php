@@ -116,7 +116,7 @@ function toggleMenu() {
     
     @else
     <center>
-        <h4 style="color: white; background: blue; border-radius: 29px; font-size: 29.29px;">Available Jobs</h4>
+        <h4 style="color: white; background: blue; border-radius: 29px; font-size: 29.29px;">Available Jobs</h4><br>
         <table>
             <tr>
                 <th style="color: blue;">Job_Id</th>

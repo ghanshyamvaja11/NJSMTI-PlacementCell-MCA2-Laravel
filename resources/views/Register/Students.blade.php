@@ -97,11 +97,16 @@ function toggleMenu() {
     <div class="bar"></div>
 </div>
     <a href="{{url('')}}/">HOME</a>
+    <a href="{{url('')}}/login">login</a>
     <a href="{{url('')}}/contactus">Contact us</a>
 </div>
 </section>
 
 <main>
+     @if (isset($success))
+
+        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
+     @endif
     @error('Enrollment_No')
         <center><h4 style="color: red; font-size: 15.9px;">{{$message}}</h4></center>
     @enderror
@@ -162,7 +167,6 @@ function toggleMenu() {
 </html>
 
     @if (isset($success))
-        <h4 style="color: green; font-size: 15.9px;">{{$success}}</h4>
 <script>
 function Speech(){
         if ('speechSynthesis' in window) {

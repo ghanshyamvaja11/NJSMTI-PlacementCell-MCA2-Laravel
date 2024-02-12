@@ -126,6 +126,8 @@ function toggleMenu() {
                 <center><h4 style="color: red; font-size: 15.9px;">{{$message}}</h4></center>
             @enderror
     <section>
+        <br>
+            <center><a href="{{url('')}}/registration"><input type="button" name="Login" value="Register Yourself" style="font-size: 19.9px; border-radius: 29px; font-weight: bolder; color: white; background: blue;"></a></center>
          <br>
          <center>
         <form action="{{url('')}}/login" method="POST">

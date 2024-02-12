@@ -109,8 +109,8 @@ function toggleMenu() {
             <img src="{{asset('Images/Header&Footer/NJSMTI.png')}}" alt="img"> 
         </center>
        <div style='background-color: yellow; text-align: center; padding-top: 5px; padding-bottom: 1px;'><a href="{{url('')}}/login"><img id="Login" src="{{asset('Images/Login/Login.png')}}"></a></div>
-        {{-- <div style='background-color: lightblue;; text-align: center; padding-top: 15px; padding-bottom: 11.9px;'>
-        <a href="https://savjani-college.000webhostapp.com/College%20Web/php%20files/Developer%20Page.php" style="text-decoration: none;"><h5 id="Developer_Page">See The Developer Page</h5></a></div> --}}
+           <div style='background-color: lightblue;; text-align: center; padding-top: 15px; padding-bottom: 11.9px;'>
+        <a href="https://ghanshyamvaja.000webhostapp.com" style="text-decoration: none;"><h5 id="Developer_Page">See The Developer Page</h5></a></div>
         </header>
 <div class="navbar">
     <!-- Add this inside the <nav class="navbar"> ... </nav> block -->
@@ -159,11 +159,8 @@ function toggleMenu() {
                 <img src="{{asset('Images/Companies/Img2.jpg')}}" class="Comapnies" alt="img2">
                 <img src="{{asset('Images/Companies/Img3.jpg')}}" class="Comapnies" alt="img3">
                 <img src="{{asset('Images/Companies/Img4.jpg')}}" class="Comapnies" alt="img4">
-<<<<<<< HEAD
                 <img src="{{asset('Images/Companies/Img5.jpg')}}" class="Comapnies" alt="img5">
                 <img src="{{asset('Images/Companies/Img6.jpg')}}" class="Comapnies" alt="img6">
-=======
->>>>>>> 3c7be8318fb699997152ab09ea0bc3429244ea16
             </marquee>
         </div>
     </section>

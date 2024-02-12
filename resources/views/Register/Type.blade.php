@@ -103,9 +103,9 @@ function toggleMenu() {
         <center>
             <h4>Choose anyone:</h4>
             <p>
-    <a href="{{url('')}}/register/student"><input type="button" value="Are you Student?"></a>
+    <a href="{{url('')}}/register/student"><input type="button" value="Are you Student?" style="font-size: 24.9px;"></a>
     <p>
-    <a href="{{url('')}}/register/company"><input type="button" value="Are you Company Owner?"></a>
+    <a href="{{url('')}}/register/company"><input type="button" value="Are you Company Owner?" style="font-size: 24.9px;"></a>
         </center>
         </div>
     </section>

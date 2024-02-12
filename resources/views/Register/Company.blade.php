@@ -97,11 +97,19 @@ function toggleMenu() {
     <div class="bar"></div>
 </div>
     <a href="{{url('')}}/">HOME</a>
+    <a href="{{url('')}}/login">login</a>
     <a href="{{url('')}}/contactus">Contact us</a>
 </div>
 </section>
 
 <main>
+                @if (isset($success))
+
+                <h4 style="color: red; font-size: green; font-size: 15.9px;">Hi, {{$Name}}</h4>
+
+                <h4 style="color: green; font-size: 15.9px;">{{$success}}</h4>
+               @endif
+               
             @error('CIN')
                 <center><h4 style="color: red; font-size: 15.9px;">{{$message}}</h4></center>
             @enderror
@@ -156,9 +164,6 @@ function toggleMenu() {
 </body>
 </html>
             @if (isset($success))
-                <h4 style="color: red; font-size: green; font-size: 15.9px;">Hi, {{$Name}}</h4>
-                <h4 style="color: green; font-size: 15.9px;">{{$success}}</h4>
-
 <script>
 function Speech(){
         if ('speechSynthesis' in window) {
