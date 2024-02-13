@@ -11,28 +11,6 @@ use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
-    public function uploadresume(Request $request)
-    {
-        $request->validate(
-            [
-                'resume' => 'required|mimes:pdf,txt,word',
-            ]
-        );
-        $User = Session('UserId');
-        $uploadedresume = $request->file('resume');
-        $filename = "Student " . $User . "." . $uploadedresume->getClientOriginalExtension();
-
-        // if(Storage::disk("public")->exists('public/uploads/'. $filename)){
-        //     Storage::disk("public")->delete('public/uploads/'.$filename);
-        echo "hi";
-        // }
-
-        $table = Students::where('StudentId', $User)->first();
-        $table->Resume_Path = "public/" . $uploadedresume->storeAs('uploads', $filename, 'public_html');
-        $table->save();
-        // return redirect('/student/uploadresume');
-    }
-
     public function updateprofile(Request $request)
     {
         $request->validate(
