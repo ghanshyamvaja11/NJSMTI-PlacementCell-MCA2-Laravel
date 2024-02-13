@@ -39,7 +39,7 @@ class StudentController extends Controller
         if ($table->save()) {
             $success = "Your profile updated successfully.";
 
-            mail($request->email, 'Update Profile', $success);
+            Mail::send(new SendMail($request->email, 'Update Profile', $success));
 
             return view('Student.Update Profile')->with(compact('Your profile  is updated successfully.'));
         }
