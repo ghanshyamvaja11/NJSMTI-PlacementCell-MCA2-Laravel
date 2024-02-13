@@ -191,8 +191,6 @@ function toggleMenu() {
 
 </main>
 @include('Layout.footer')
-</body>
-</html>
 
 <script>
 function Speech(){
@@ -231,3 +229,5 @@ function Speech(){
 }
 Speech();
     </script>
+</body>
+</html>
