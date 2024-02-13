@@ -423,11 +423,9 @@ class Register_Login extends Controller
     public function createNewPassword(Request $request)
     {
         $request->validate(
-            [
-                'password' => 'required|min:8',
-                'password_confirmation' => 'required|same:password_confirmation',
-            ]
-        );
+                        ['password' => 'required|min:8|confirmed',
+    'password_confirmation' => 'required',
+]);
 
         if (session()->has('UserType') and session()->has('UserId') and session()->has('Email')) {
             $UserType = session('UserType');
