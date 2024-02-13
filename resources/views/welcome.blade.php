@@ -156,8 +156,8 @@ function toggleMenu() {
         <div style="display: inline-block; text-align: left; color: white; background-color: blue; padding: 9px; border-radius: 29px;">
             @foreach($Placement as $data)
             <h4 style="display: inline;">Placement Id : </h4><h5 style="display : inline; color: yellow;">{{$data->PlacementId}}</h5><br>
-            <h4 style="display : inline;">Student Enrollment : </h4><h5 style="display : inline; color: yellow;">{$data->StudentId}}</h5><br>
-             <h4 style="display : inline;">Job Id : </h4><h5 style="display : inline; color: yellow;">{$data->JobId}}</h5><br>
+            <h4 style="display : inline;">Student Enrollment : </h4><h5 style="display : inline; color: yellow;">{{$data->StudentId}}</h5><br>
+             <h4 style="display : inline;">Job Id : </h4><h5 style="display : inline; color: yellow;">{{$data->JobId}}</h5><br>
             <h4 style="display : inline;">Date Placed : </h4><h5 style="display : inline; color: yellow;">{{$data->DatePlaced}}</h5><br>
             @endforeach
             </div>
