@@ -150,10 +150,10 @@ function toggleMenu() {
     </section>
     <hr>
     
-  <section>
+<section>
     <div id="BKNMU">
         <h1>Placements</h1>
-        <marquee>
+        <marquee id="Placement">
             @foreach($Placement as $data)
             <div style="display: inline-block; text-align: left; color: white; background-color: blue; padding: 9px; border-radius: 29px;">
                 <h4 style="display: inline;">Placement Id : </h4><h5 style="display : inline; color: yellow;">{{$data->PlacementId}}</h5><br>
@@ -245,6 +245,17 @@ function toggleMenu() {
 @include('Layout.footer')
 
 <script>
+    document.addEventListener('click', function(event) {
+        var marquee = document.getElementById('Placement');
+        var isClickInsideMarquee = marquee.contains(event.target);
+
+        if (!isClickInsideMarquee) {
+            marquee.start();
+        } else {
+            marquee.stop();
+        }
+    });
+    
 function Speech(){
         if ('speechSynthesis' in window) {
 
