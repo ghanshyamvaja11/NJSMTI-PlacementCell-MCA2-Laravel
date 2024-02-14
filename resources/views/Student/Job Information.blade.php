@@ -111,7 +111,7 @@ function toggleMenu() {
 </div>
     <a href="{{url('')}}/student">HOME</a>
     <a href="{{url('')}}/student/jobs" style="color: white; background-color: red; font-weight: bolder; border: 2px solid white; border-radius: 29.9px;">Jobs</a>
-    <a href="{{url('')}}/student/events"></a>
+    <a href="{{url('')}}/student/events">Events</a>
     <a href="{{url('')}}/student/applies">Applies</a>
     <a href="{{url('')}}/student/uploadresume">Upload Resume</a>
     <a href="{{url('')}}/student/updateprofile" >Update Profile</a>
