@@ -150,6 +150,8 @@ function toggleMenu() {
   </div>
   @if (!isset($applied))
       <center><input type="submit" style="color: white; background: green; font-size: 29px; border-radius: 15.9px;" name="submit" value="Apply"></center>
+  @else
+  <center><h4 style="color: green;">Applied</h4></center>
   @endif
         </form>
 </main>
