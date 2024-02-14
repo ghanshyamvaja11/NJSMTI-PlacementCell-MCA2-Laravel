@@ -41,7 +41,7 @@ class StudentController extends Controller
 
             Mail::send(new SendMail($request->email, 'Update Profile', $success));
 
-            return view('Student.Update Profile')->with(compact('Your profile  is updated successfully.'));
+            return view('Student.Update Profile')->with(compact('success'));
         }
     }
 }
