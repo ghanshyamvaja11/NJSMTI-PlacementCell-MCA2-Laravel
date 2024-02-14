@@ -85,7 +85,7 @@ class Register_Login extends Controller
             if ($table->save()) {
                 $success = "Thank you " . $Name . " for registering yourself on N.J. Sonecha Management and Technical Institute's Placement Cell.";
 
-                Mail::send(new SendMail($Email, 'Registraction Confirmation', $success));
+                Mail::send(new SendMail($Email, 'Registration Confirmation', $success));
 
                 return view('Register.Company')->with(compact('success', 'Name'));
             }
