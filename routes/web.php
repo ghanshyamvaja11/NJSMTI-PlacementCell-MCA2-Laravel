@@ -117,11 +117,11 @@ Route::get('/administrator/query/{email}', function ($email) {
     return view('Administrator.QuerySolve')->with(compact('User'));
 });
 Route::post('/administrator/solvequery', function (Request $request) {
-    $reply = $request->reply;
     $email = $request->email;
-    $Student = ContactUs::where('email', $email)->first();
-    if ($Student->delete()) {
-        // mail($email, $Student->Query_Type, $reply);
+    $user = ContactUs::where('email', $email)->first();
+                $reply = $request->reply;
+                Mail::send(new SendMail($email, $user->Query_Type, $reply));
+    if ($user->delete()) {
         return redirect('/administrator/solvequery');
     }
 });
