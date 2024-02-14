@@ -34,7 +34,7 @@ class StudentController extends Controller
         $table->OTP = rand(100000, 999999);
 
         if($table->save()){
-            $success = "Your profile is updated successfully.";
+              $success = "Hi ".$table->Name.", Your profile is updated successfully.";
 
             Mail::send(new SendMail($request->email, 'Update Profile', $success));
             
