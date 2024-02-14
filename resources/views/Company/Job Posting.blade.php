@@ -138,6 +138,10 @@ function toggleMenu() {
     @if (isset($Delete))
         <center><h4 style="color: red; font-size: 15.9px;">{{$Delete}}</h4></center>
     @endif
+        @if (isset($success))
+
+        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
+        @endif
     <section>
         <p>
         <center>
@@ -162,7 +166,6 @@ function toggleMenu() {
     </section>
     
     @if (isset($success))
-        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
 
 <script>
 function Speech(){
