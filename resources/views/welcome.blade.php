@@ -204,6 +204,7 @@ function toggleMenu() {
 </section>
  @endif
  
+ 
     <section>
         <div id="BKNMU">
                 <h1>Companies</h1>
