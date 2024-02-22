@@ -128,10 +128,7 @@ function toggleMenu() {
                 <th style="color: blue;">Student_Id</th>
                 <th style="color: blue">Job_Id</th>
                 <th style="color: blue;">Application_Date</th>
-                <!--<th style="color: blue;">Status</th>-->
                 <th style="color: blue;">Show_Profile</th>
-                <!--<th style="color: blue;">Approve</th>
-                <th style="color: blue;">Reject</th>-->
             </tr>
             {{$first = false}}                
             @endif

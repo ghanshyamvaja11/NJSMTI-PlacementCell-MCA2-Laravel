@@ -111,7 +111,7 @@ function toggleMenu() {
 </div>
     <a href="{{url('')}}/student">HOME</a>
     <a href="{{url('')}}/student/jobs" style="color: white; background-color: red; font-weight: bolder; border: 2px solid white; border-radius: 29.9px;">Jobs</a>
-    <a href="{{url('')}}/student/events"></a>
+    <a href="{{url('')}}/student/events">Events</a>
     <a href="{{url('')}}/student/applies">Applies</a>
     <a href="{{url('')}}/student/uploadresume">Upload Resume</a>
     <a href="{{url('')}}/student/updateprofile" >Update Profile</a>
@@ -150,6 +150,8 @@ function toggleMenu() {
   </div>
   @if (!isset($applied))
       <center><input type="submit" style="color: white; background: green; font-size: 29px; border-radius: 15.9px;" name="submit" value="Apply"></center>
+  @else
+  <center><h4 style="color: green;">Applied</h4></center>
   @endif
         </form>
 </main>

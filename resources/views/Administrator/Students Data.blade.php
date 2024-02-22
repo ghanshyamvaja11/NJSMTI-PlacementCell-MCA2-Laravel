@@ -127,7 +127,7 @@ function toggleMenu() {
 </section>
 
 <main>
-     <center> <center><h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Manage Student data</h1></center></center>
+     <center> <center><h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Student data</h1></center></center>
         <hr>
         @if (isset($StudentId))
         @error('StudentId')

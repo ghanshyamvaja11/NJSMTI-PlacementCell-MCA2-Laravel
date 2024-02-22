@@ -115,8 +115,12 @@ function toggleMenu() {
     @if ($jobs->isEmpty())
     
     @else
+    @if (isset($delete))
+
+        <center><h4 style="color: red; font-size: 15.9px;">{{$delete}}</h4></center>
+    @endif
     <center>
-        <h4 style="color: white; background: blue; border-radius: 29px; font-size: 29.29px;">Available Jobs</h4><br>
+        <h4 style="color: white; background: green; border-radius: 29px; font-size: 29.29px; display: inline;">Available Jobs</h4>
         <table>
             <tr>
                 <th style="color: blue;">Job_Id</th>
@@ -142,7 +146,6 @@ function toggleMenu() {
 </body>
 </html>
 @if (isset($delete))
-        <h4 style="color: green; font-size: 15.9px;">{{$delete}}</h4>
 
 <script>
 function Speech(){

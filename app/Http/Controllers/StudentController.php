@@ -37,11 +37,12 @@ class StudentController extends Controller
         $table->OTP = rand(100000, 999999);
 
         if ($table->save()) {
-            $success = "Your profile updated successfully.";
+            $success = "Hi " . $table->Name . ", Your profile is updated successfully.";
 
             Mail::send(new SendMail($request->email, 'Update Profile', $success));
 
-            return view('Student.Update Profile')->with(compact('Your profile  is updated successfully.'));
+            $Student = Students::where('StudentId', Session('UserId'))->first();
+            return view('Student.Update Profile')->with(compact('success', 'Student'));
         }
     }
 }

@@ -139,6 +139,9 @@ function toggleMenu() {
     @if (isset($AccountExists))
         <center><h4 style="color: red; font-size: 15.9px;">{{$AccountExists}}</h4></center>
     @endif
+        @if (isset($success))
+        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
+        @endif
     <section>
         <p>
         <center>
@@ -174,8 +177,6 @@ function toggleMenu() {
 </html>
 
     @if (isset($success))
-        <h4 style="color: green; font-size: 15.9px;">{{$success}}</h4>
-
 <script>
 function Speech(){
         if ('speechSynthesis' in window) {

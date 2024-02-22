@@ -100,7 +100,6 @@ function toggleMenu() {
     <main>
         <center><h1 style="color: white; background: blue; border-radius: 29px; font-size: 24.9px;">Solve Queries</h1></center>
         <hr>
-        <h4 style="color: blue;">no data available yet.</h4>
         <section>
             <center>
                 @if(isset($query) and count($query) > 0)
@@ -129,6 +128,8 @@ function toggleMenu() {
                         </select>
                         <textarea name="description" id="description" cols="20" rows="5" placeholder="describe Your Query in detail *" readonly>{{$User->description}}</textarea><br>
                         </center>
+                             <textarea name="reply" id="description" cols="20" rows="5" placeholder="Write Reply *"></textarea><br>
+                       </center>
                         <center><input type="submit" name="submit" value="Solved" id="Submit"></center>
                     </fieldset>
                 </form>
