@@ -150,6 +150,7 @@ function toggleMenu() {
     </section>
     <hr>
     
+@if(isset($Placement))
 <section>
     <div id="BKNMU">
         <h1>Placements</h1>
@@ -201,6 +202,7 @@ function toggleMenu() {
         </marquee>
     </div>
 </section>
+@endif
 
     <section>
         <div id="BKNMU">
