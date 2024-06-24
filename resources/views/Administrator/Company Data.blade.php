@@ -159,12 +159,12 @@ function toggleMenu() {
 @if (isset($CompanyId))
         @if (isset($company))
         <div style="display: inline-block; text-align: left; color: white; background-color: blue; padding: 9px; border-radius: 29px;">
-            <h4 style="display: inline;">CIN : </h4><h5 style="display : inline; color: yellow;">{{$company->CompanyId}}</h5><br>
+            <h4 style="display: inline;">CIN : </h4><h5 style="display : inline; color: yellow;">{{$CompanyId}}</h5><br>
             <h4 style="display : inline;">Company's Name : </h4><h5 style="display : inline; color: yellow;">{{$company->Name}}</h5><br>
-            @if ($company->Program == "IT")
+            @if ($company->Industry == "IT")
             <h4 style="display : inline;">Industry : </h4><h5 style="display : inline; color: yellow;">Information Technology</h5>
             @else
-            <h4 style="display : inline;">Industry : </h4><h5 style="display : inline; color: yellow;">Businness</h5>
+            <h4 style="display : inline;">Industry : </h4><h5 style="display : inline; color: yellow;">Business</h5>
             @endif
             <br>
             <h4 style="display : inline;">Email : </h4><h5 style="display : inline; color: yellow;">{{$company->Email}}</h5><br>

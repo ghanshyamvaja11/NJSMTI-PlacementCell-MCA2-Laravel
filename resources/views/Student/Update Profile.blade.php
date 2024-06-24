@@ -141,6 +141,8 @@ function toggleMenu() {
     @endif
         @if (isset($success))
         <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
+        @if (isset($success))
+        <center><h4 style="color: green; font-size: 15.9px;">{{$success}}</h4></center>
         @endif
     <section>
         <p>

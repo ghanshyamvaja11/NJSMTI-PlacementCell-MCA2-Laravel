@@ -151,6 +151,7 @@ function toggleMenu() {
     <hr>
     
     @if (isset($Placement))
+       @if(isset($Placement))
 <section>
     <div id="BKNMU">
         <h1>Placements</h1>
@@ -203,8 +204,7 @@ function toggleMenu() {
     </div>
 </section>
  @endif
- 
- 
+@endif
     <section>
         <div id="BKNMU">
                 <h1>Companies</h1>

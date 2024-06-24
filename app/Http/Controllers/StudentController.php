@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Students;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -11,18 +10,16 @@ use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
-    public function updateprofile(Request $request)
-    {
+    public function updateprofile(Request $request){
         $request->validate(
             [
-                'Enrollment_No' => 'required',
-                'name' => 'required',
-                'course' => 'required',
-                'mobile' => 'required',
-                'email' => 'required|email',
-                'password' => 'required|min:8|same:password_confirmation',
-            ]
-        );
+            'Enrollment_No' => 'required',
+            'name' => 'required',
+            'course' => 'required',
+            'mobile' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8|same:password_confirmation',
+        ]);
 
         $table = Students::where('StudentId', Session('UserId'))->first();
         $table->UserType = "Student";
@@ -30,10 +27,10 @@ class StudentController extends Controller
         $table->Program = $request->course;
         $table->Mobile = $request->mobile;
         $table->Email = strtolower($request->email);
-        if ($request->password != "11111111") {
+        if($request->password != "11111111"){
             $table->Password = md5($request->password);
         }
-
+        
         $table->OTP = rand(100000, 999999);
 
         if ($table->save()) {
@@ -42,7 +39,14 @@ class StudentController extends Controller
             Mail::send(new SendMail($request->email, 'Update Profile', $success));
 
             $Student = Students::where('StudentId', Session('UserId'))->first();
+        if($table->save()){
+              $success = "Hi ".$table->Name.", Your profile is updated successfully.";
+
+            Mail::send(new SendMail($request->email, 'Update Profile', $success));
+            
+                    $Student = Students::where('StudentId', Session('UserId'))->first();
             return view('Student.Update Profile')->with(compact('success', 'Student'));
         }
     }
+}
 }

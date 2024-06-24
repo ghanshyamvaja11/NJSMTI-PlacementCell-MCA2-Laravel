@@ -122,6 +122,8 @@ Route::post('/administrator/solvequery', function (Request $request) {
     $user = ContactUs::where('email', $email)->first();
     $reply = $request->reply;
     Mail::send(new SendMail($email, $user->Query_Type, $reply));
+                $reply = $request->reply;
+                Mail::send(new SendMail($email, $user->Query_Type, $reply));
     if ($user->delete()) {
         return redirect('/administrator/solvequery');
     }
@@ -209,13 +211,13 @@ Route::post('/student/uploadresume', function (Request $request) {
 Route::get('/student/jobs', function () {
     $UserId = session('UserId');
     $jobs = '';
-    $jobapplication = Applications::where('StudentId', $UserId)->get();
+    $jobapplications = Applications::where('StudentId', $UserId)->get();
     $JobIds = [];
     $Status = [];
     $remainingjobs = 0;
 
-    if (count($jobapplication) > 0) {
-        foreach ($jobapplication as $jobapplication) {
+    if (count($jobapplications) > 0) {
+        foreach ($jobapplications as $jobapplication) {
             $JobIds[] = $jobapplication->JobId;
             $Status[] = $jobapplication->Status;
         }
