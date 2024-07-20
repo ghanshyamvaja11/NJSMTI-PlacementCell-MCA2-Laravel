@@ -1,5 +1,3 @@
-[NJSMTI PlacementCell : Click Here to Visit](https://njsmtiplacementscell.000webhostapp.com/)
-
 Welcome to the NJSMTI Placement Cell website, powered by Laravel. Our platform offers three distinct login portals for administrator, students and companies, each tailored to their unique needs. Students can explore career opportunities, submit resumes, and discover internships or jobs. Companies gain access to a pool of talented students and graduates, making recruiting a breeze. Administrators have exclusive tools to manage the placement process efficiently, from posting jobs to coordinating recruitment drives.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
